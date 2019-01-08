@@ -26,7 +26,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
-              <MenuItem fx:id="mIgetPoint" mnemonicParsing="false" onAction="#getMouseClickPoint" text="Click Point" />
+              <MenuItem fx:id="mIgetPoint" mnemonicParsing="false" onAction="#getMouseClickPoint" text="制御点指定" />
                   <MenuItem fx:id="mIshowPoint" mnemonicParsing="false" onAction="#showPoint" text="座標取得" />
                   <MenuItem fx:id="mIclear" mnemonicParsing="false" onAction="#clearItems" text="表削除" />
             </items>
@@ -45,11 +45,11 @@
           <TableColumn fx:id="tCtext" prefWidth="169.0" text="TEXT" />
         </columns>
       </TableView>
-      <Label layoutX="11.0" layoutY="202.0" text="X" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="11.0" />
+      <Label layoutX="10.0" layoutY="202.0" text="X" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0" />
       <TextField fx:id="tFPointX" layoutX="18.0" layoutY="197.0" prefHeight="28.0" prefWidth="56.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="18.0" />
-      <Label layoutX="85.0" layoutY="202.0" text="Y" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="85.0" />
-      <TextField fx:id="tFPointY" layoutX="92.0" layoutY="197.0" prefHeight="28.0" prefWidth="56.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="92.0" />
+      <Label layoutX="74.0" layoutY="202.0" text="Y" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="74.0" />
+      <TextField fx:id="tFPointY" layoutX="83.0" layoutY="197.0" prefHeight="28.0" prefWidth="56.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="83.0" />
       <Button fx:id="btnSendToNext" layoutX="235.0" layoutY="197.0" onAction="#handleSendToNextAction" prefHeight="28.0" prefWidth="85.0" text="SendTo_Next" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="9.0" />
-      <CheckBox fx:id="chbEnter" layoutX="160.0" layoutY="202.0" mnemonicParsing="false" text="+ENTER" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="97.0" />
+      <CheckBox fx:id="chbEnter" layoutX="160.0" layoutY="202.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="78.0" text="+ENTER" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="97.0" />
    </children>
 </AnchorPane>
