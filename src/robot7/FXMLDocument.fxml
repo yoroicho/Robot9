@@ -49,7 +49,7 @@
       <TextField fx:id="tFPointX" layoutX="18.0" layoutY="197.0" prefHeight="28.0" prefWidth="56.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="18.0" />
       <Label layoutX="85.0" layoutY="202.0" text="Y" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="85.0" />
       <TextField fx:id="tFPointY" layoutX="92.0" layoutY="197.0" prefHeight="28.0" prefWidth="56.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="92.0" />
-      <Button fx:id="btnSendToNext" layoutX="235.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleSendToNextAction" prefHeight="28.0" prefWidth="85.0" text="SendToNext" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="9.0" />
+      <Button fx:id="btnSendToNext" layoutX="235.0" layoutY="197.0" onAction="#handleSendToNextAction" prefHeight="28.0" prefWidth="85.0" text="SendTo_Next" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="9.0" />
       <CheckBox fx:id="chbEnter" layoutX="160.0" layoutY="202.0" mnemonicParsing="false" text="+ENTER" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="97.0" />
    </children>
 </AnchorPane>
