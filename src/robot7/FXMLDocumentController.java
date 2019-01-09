@@ -151,7 +151,19 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    void handleSendToNextAction(ActionEvent event) throws IOException {
+    void handleAutoToRunAction(ActionEvent event) {
+        try {
+            while(handleSendToNextAction(event)){
+                Thread.sleep(1000);
+            }       } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @FXML
+    boolean handleSendToNextAction(ActionEvent event) throws IOException {
 
         //btnSendToNext.setVisible(false);
         System.out.println("SendToNext");
@@ -219,9 +231,11 @@ public class FXMLDocumentController implements Initializable {
         tVdata.scrollTo(i);
         if (i == tVdata.getItems().size()) {
             MsgBox.info("最後の行を処理しました。");
+            return false;
         }
         //btnSendToNext.setVisible(true);
         Mouse.mouseMove(this.lastMousePointX, this.lastMousePointY);
+        return true;
     }
 
     @FXML
