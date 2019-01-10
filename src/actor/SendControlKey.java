@@ -98,6 +98,78 @@ public class SendControlKey {
                     robot.keyRelease(KeyEvent.VK_ALT);
                     robot.delay(IT);
                     break;
+                case "1":
+                    robot.keyPress(KeyEvent.VK_F1);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F1);
+                    robot.delay(IT);
+                    break;
+                case "2":
+                    robot.keyPress(KeyEvent.VK_F2);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F2);
+                    robot.delay(IT);
+                    break;
+                case "3":
+                    robot.keyPress(KeyEvent.VK_F3);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F3);
+                    robot.delay(IT);
+                    break;
+                case "4":
+                    robot.keyPress(KeyEvent.VK_F4);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F4);
+                    robot.delay(IT);
+                    break;
+                case "5":
+                    robot.keyPress(KeyEvent.VK_F5);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F5);
+                    robot.delay(IT);
+                    break;
+                case "6":
+                    robot.keyPress(KeyEvent.VK_F6);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F6);
+                    robot.delay(IT);
+                    break;
+                case "7":
+                    robot.keyPress(KeyEvent.VK_F7);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F7);
+                    robot.delay(IT);
+                    break;
+                case "8":
+                    robot.keyPress(KeyEvent.VK_F8);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F8);
+                    robot.delay(IT);
+                    break;
+                case "9":
+                    robot.keyPress(KeyEvent.VK_F9);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F9);
+                    robot.delay(IT);
+                    break;
+                case "0":
+                    robot.keyPress(KeyEvent.VK_F10);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F10);
+                    robot.delay(IT);
+                    break;
+                case "-":
+                    robot.keyPress(KeyEvent.VK_F11);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F11);
+                    robot.delay(IT);
+                    break;
+                case "^":
+                    robot.keyPress(KeyEvent.VK_F12);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_F12);
+                    robot.delay(IT);
+                    break;
                 default:
                     System.out.println("不正制御文字");
                     break;
