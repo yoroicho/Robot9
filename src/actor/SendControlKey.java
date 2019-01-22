@@ -74,6 +74,11 @@ public class SendControlKey {
                     //robot.delay(IT);
                     robot.keyRelease(KeyEvent.VK_LEFT);
                     break;
+                case "T":
+                    robot.keyPress(KeyEvent.VK_TAB);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_TAB);
+                    break;
                 case "S":
                     robot.keyPress(KeyEvent.VK_SHIFT);
                     //robot.delay(IT);
@@ -168,6 +173,22 @@ public class SendControlKey {
                     robot.keyPress(KeyEvent.VK_F12);
                     //robot.delay(IT);
                     robot.keyRelease(KeyEvent.VK_F12);
+                    robot.delay(IT);
+                    break;
+                case "E":
+                    robot.keyPress(KeyEvent.VK_ENTER);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_ENTER);
+                    robot.delay(IT);
+                    break;
+                case "B":
+                    robot.keyPress(KeyEvent.VK_SPACE);
+                    //robot.delay(IT);
+                    robot.keyRelease(KeyEvent.VK_SPACE);
+                    robot.delay(IT);
+                    break;
+                case "W":
+                    // wait only
                     robot.delay(IT);
                     break;
                 default:

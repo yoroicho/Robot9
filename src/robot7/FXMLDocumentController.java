@@ -202,6 +202,15 @@ public class FXMLDocumentController implements Initializable {
             if (typingLetter.substring(0, 1).equals("@")) {
                 if (typingLetter.substring(1, 2).equals("'")) { // Comment.
                     MsgBox.plain(typingLetter);
+                } else if (typingLetter.substring(1, 2).equals(",")){ // MouseClick
+                    ;
+                    //MsgBox.plain("Click "+typingLetter.substring(2));
+                            String point []=(typingLetter.substring(2)).split(",");
+                      MsgBox.plain("Click "+point[0]+" "+point[1]); 
+                      actor.Mouse.mouseClick(
+                              Integer.parseInt(point[0]),
+                              Integer.parseInt(point[1])
+                      );
                 } else {
                     // Function type.
                     SendControlKey.sendControlKey(typingLetter.substring(1, 2));
@@ -234,7 +243,9 @@ public class FXMLDocumentController implements Initializable {
             return false;
         }
         //btnSendToNext.setVisible(true);
-        Mouse.mouseMove(this.lastMousePointX, this.lastMousePointY);
+        
+        // ↓連続入力の時に具合が悪いのでコメントアウトした。
+        // Mouse.mouseMove(this.lastMousePointX, this.lastMousePointY);
         return true;
     }
 
