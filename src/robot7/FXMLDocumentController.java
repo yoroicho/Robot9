@@ -153,15 +153,16 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     void handleAutoToRunAction(ActionEvent event) {
         try {
-            while(handleSendToNextAction(event)){
+            while (handleSendToNextAction(event)) {
                 Thread.sleep(1000);
-            }       } catch (IOException ex) {
+            }
+        } catch (IOException ex) {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InterruptedException ex) {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     @FXML
     boolean handleSendToNextAction(ActionEvent event) throws IOException {
 
@@ -202,15 +203,22 @@ public class FXMLDocumentController implements Initializable {
             if (typingLetter.substring(0, 1).equals("@")) {
                 if (typingLetter.substring(1, 2).equals("'")) { // Comment.
                     MsgBox.plain(typingLetter);
-                } else if (typingLetter.substring(1, 2).equals(",")){ // MouseClick
+                } else if (typingLetter.substring(1, 2).equals(",")) { // MouseClick
                     ;
                     //MsgBox.plain("Click "+typingLetter.substring(2));
-                            String point []=(typingLetter.substring(2)).split(",");
-                      MsgBox.plain("Click "+point[0]+" "+point[1]); 
-                      actor.Mouse.mouseClick(
-                              Integer.parseInt(point[0]),
-                              Integer.parseInt(point[1])
-                      );
+                    String point[] = (typingLetter.substring(2)).split(",");
+                    MsgBox.plain("Click " + point[0] + " " + point[1]);
+                    actor.Mouse.mouseClick(
+                            Integer.parseInt(point[0]),
+                            Integer.parseInt(point[1])
+                    );
+                } else if (typingLetter.substring(1, 2).equals("]")) { // 終端標識
+                    data.get(i).setPassFlag("Typed");
+                    //tVdata.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+                    tVdata.getSelectionModel().select(++i);
+                    tVdata.refresh();
+                    tVdata.scrollTo(i);
+                    return false;
                 } else {
                     // Function type.
                     SendControlKey.sendControlKey(typingLetter.substring(1, 2));
@@ -239,11 +247,11 @@ public class FXMLDocumentController implements Initializable {
         tVdata.refresh();
         tVdata.scrollTo(i);
         if (i == tVdata.getItems().size()) {
-            MsgBox.info("最後の行を処理しました。");
+            MsgBox.info("停止標識なく最後の行を処理しました。");
             return false;
         }
         //btnSendToNext.setVisible(true);
-        
+
         // ↓連続入力の時に具合が悪いのでコメントアウトした。
         // Mouse.mouseMove(this.lastMousePointX, this.lastMousePointY);
         return true;
