@@ -2,6 +2,9 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * マルチバイト文字はキーを送る事ができないのでクリップボード経由となる（未作成）
+ * 全角文字をチェックするサンプル共通関数です。（下のサイトを参考に自動判定して分岐）
+ * https://blog.java-reference.com/common-check-zenkaku/
  */
 package robot7;
 
